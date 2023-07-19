@@ -1,19 +1,12 @@
-var searchTerm = "";
 
   function pesquisar() {
-    var newSearchTerm = document.getElementById("search-input").value.toLowerCase();
+    var searchTerm = document.getElementById("search-input").value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     var conteudo = document.getElementById("conteudo");
 
-    if (newSearchTerm.trim().length === 0) {
+    if (searchTerm.trim().length < 3) {
       clearHighlight(conteudo);
       return;
     }
-
-    if (newSearchTerm === searchTerm) {
-      return;
-    }
-
-    searchTerm = newSearchTerm;
 
     clearHighlight(conteudo);
 
@@ -29,11 +22,10 @@ var searchTerm = "";
   }
 
   function clearHighlight(element) {
-    var highlightedElements = element.querySelectorAll('.highlighted');
-    for (var i = 0; i < highlightedElements.length; i++) {
-      var highlightedElement = highlightedElements[i];
-      var parent = highlightedElement.parentNode;
-      parent.replaceChild(document.createTextNode(highlightedElement.textContent), highlightedElement);
+    var highlightedElements = element.getElementsByClassName('highlighted');
+    while (highlightedElements.length > 0) {
+      var parent = highlightedElements[0].parentNode;
+      parent.replaceChild(document.createTextNode(highlightedElements[0].textContent), highlightedElements[0]);
     }
   }
 
@@ -46,3 +38,4 @@ var searchTerm = "";
 
   var searchInput = document.getElementById("search-input");
   searchInput.addEventListener("keydown", handleKeyPress);
+
