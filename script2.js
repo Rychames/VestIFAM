@@ -1,48 +1,48 @@
-var highlightedElements = [];
+var searchTerm = "";
 
   function pesquisar() {
-    var searchTerm = document.getElementById("search-input").value.toLowerCase();
+    var newSearchTerm = document.getElementById("search-input").value.toLowerCase();
     var conteudo = document.getElementById("conteudo");
-    var regex = new RegExp(searchTerm, "gi");
 
-    resetHighlight();
-
-    if (searchTerm.trim() === "") {
+    if (newSearchTerm.trim().length === 0) {
       clearHighlight(conteudo);
       return;
     }
 
-    var conteudoHTML = conteudo.innerHTML;
-    var conteudoDestacado = conteudoHTML.replace(regex, function(matchedWord) {
-      var uniqueId = 'highlight-' + Math.random().toString(36).substr(2, 9);
-      highlightedElements.push(uniqueId);
-      return '<span id="' + uniqueId + '" class="highlighted">' + matchedWord + '</span>';
-    });
+    if (newSearchTerm === searchTerm) {
+      return;
+    }
 
-    if (conteudoHTML !== conteudoDestacado) {
-      conteudo.innerHTML = conteudoDestacado;
+    searchTerm = newSearchTerm;
 
-      var elementosDestacados = document.querySelectorAll('.highlighted');
-      if (elementosDestacados.length > 0) {
-        var primeiroElemento = elementosDestacados[0];
-        primeiroElemento.scrollIntoView({ behavior: 'smooth' });
-      }
+    clearHighlight(conteudo);
+
+    if (window.find(searchTerm, false, false, true)) {
+      var sel = window.getSelection();
+      var range = sel.getRangeAt(0);
+      var span = document.createElement("span");
+      span.className = "highlighted";
+      range.surroundContents(span);
     } else {
       alert("A palavra não foi encontrada no conteúdo.");
     }
-  }
-
-  function resetHighlight() {
-    var conteudo = document.getElementById("conteudo");
-    clearHighlight(conteudo);
-    highlightedElements = [];
   }
 
   function clearHighlight(element) {
     var highlightedElements = element.querySelectorAll('.highlighted');
     for (var i = 0; i < highlightedElements.length; i++) {
       var highlightedElement = highlightedElements[i];
-      var textNode = document.createTextNode(highlightedElement.textContent);
-      highlightedElement.parentNode.replaceChild(textNode, highlightedElement);
+      var parent = highlightedElement.parentNode;
+      parent.replaceChild(document.createTextNode(highlightedElement.textContent), highlightedElement);
     }
   }
+
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      pesquisar();
+    }
+  }
+
+  var searchInput = document.getElementById("search-input");
+  searchInput.addEventListener("keydown", handleKeyPress);
