@@ -1,18 +1,16 @@
-var searchTerm = "";
-  var highlightedElements = [];
+var highlightedElements = [];
 
   function pesquisar() {
-    var newSearchTerm = document.getElementById("search-input").value.toLowerCase();
+    var searchTerm = document.getElementById("search-input").value.toLowerCase();
     var conteudo = document.getElementById("conteudo");
     var regex = new RegExp(searchTerm, "gi");
 
     resetHighlight();
 
-    if (newSearchTerm.trim() === "") {
+    if (searchTerm.trim() === "") {
+      clearHighlight(conteudo);
       return;
     }
-
-    searchTerm = newSearchTerm;
 
     var conteudoHTML = conteudo.innerHTML;
     var conteudoDestacado = conteudoHTML.replace(regex, function(matchedWord) {
@@ -36,17 +34,15 @@ var searchTerm = "";
 
   function resetHighlight() {
     var conteudo = document.getElementById("conteudo");
-
-    for (var i = 0; i < highlightedElements.length; i++) {
-      var element = document.getElementById(highlightedElements[i]);
-      if (element) {
-        element.outerHTML = element.innerHTML;
-      }
-    }
+    clearHighlight(conteudo);
     highlightedElements = [];
   }
 
-  function limparPesquisa() {
-    document.getElementById("search-input").value = "";
-    resetHighlight();
+  function clearHighlight(element) {
+    var highlightedElements = element.querySelectorAll('.highlighted');
+    for (var i = 0; i < highlightedElements.length; i++) {
+      var highlightedElement = highlightedElements[i];
+      var textNode = document.createTextNode(highlightedElement.textContent);
+      highlightedElement.parentNode.replaceChild(textNode, highlightedElement);
+    }
   }
