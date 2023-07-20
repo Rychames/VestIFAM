@@ -1,5 +1,61 @@
-/* Ajuste o tamanho da fonte para dispositivos móveis */
+/* Estilos para telas menores (dispositivos móveis) */
 @media only screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .login-button,
+  .search-bar {
+    display: none;
+  }
+
+  .menu-icon,
+  .login-button,
+  .search-bar {
+    order: 3;
+    margin: 0 10px;
+  }
+
+  /* Exibe o botão de login e a barra de pesquisa quando o menu hambúrguer é ativado (checkbox "toggle-menu" marcado) */
+  #toggle-menu:checked + nav .login-button,
+  #toggle-menu:checked + nav .search-bar {
+    display: block;
+  }
+
+  /* Ajuste o layout do cabeçalho para dispositivos móveis */
+  header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo-menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    margin: 10px;
+  }
+
+  .search-bar input[type="text"] {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Ajuste o tamanho da fonte para dispositivos móveis */
   .main-text {
     font-size: 60px;
   }
@@ -16,47 +72,8 @@
   .image19 {
     width: 100%;
   }
-}
 
-/* Ajuste o layout do cabeçalho para dispositivos móveis */
-@media only screen and (max-width: 600px) {
-  .search-bar {
-    flex-grow: 1;
-  }
-
-  .login-button {
-    margin-right: 10px;
-  }
-
-  .login-button button {
-    width: 60px;
-  }
-
-  .logo img {
-    max-height: 100px;
-  }
-}
-/* Ajuste o layout da barra de pesquisa para dispositivos móveis */
-@media only screen and (max-width: 768px) {
-  .search-bar {
-    flex-grow: 1;
-    margin: 10px;
-    max-width: 300px; /* Defina o tamanho máximo para evitar que a barra ocupe toda a largura */
-  }
-
-  .search-bar input[type="text"] {
-    width: 100%;
-    max-width: 100%; /* Defina a largura máxima para evitar que a entrada fique maior que a barra */
-  }
-
-  .login-button {
-    display: none;
-  }
-}
-
-
-/* Centralizar a barra de pesquisa no cabeçalho para dispositivos móveis */
-@media only screen and (max-width: 600px) {
+  /* Centralizar a barra de pesquisa no cabeçalho para dispositivos móveis */
   header {
     display: flex;
     flex-direction: column;
@@ -64,12 +81,10 @@
   }
 
   .search-bar {
-    margin: 10px 0; /* Adicione uma margem vertical para melhor espaçamento */
+    margin: 10px 0;
   }
-}
 
-/* Ajuste o layout do rodapé para dispositivos móveis */
-@media only screen and (max-width: 768px) {
+  /* Ajuste o layout do rodapé para dispositivos móveis */
   footer {
     flex-direction: column;
     text-align: center;
@@ -85,14 +100,17 @@
   .footer-right p {
     margin-bottom: 10px;
   }
+
+  /* Estilos para a div "green-background" */
+  .green-background {
+    background-color: #488097;
+    padding: 50px;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 24px;
+  }
 }
-
-
-
-
-
-
-
 
 /* Estilos para o menu hambúrguer */
 .menu-icon {
@@ -107,86 +125,3 @@
   margin-bottom: 5px;
   background-color: #000;
 }
-
-/* Estilos para telas menores (dispositivos móveis) */
-@media only screen and (max-width: 768px) {
-  .menu-icon {
-      display: block;
-  }
-
-  .login-button {
-      display: block;
-  }
-
-  .menu-icon,
-  .login-button {
-      order: 3;
-      margin: 0 10px;
-  }
-
-  /* Exibe o botão de login quando o menu hambúrguer é ativado (checkbox "toggle-menu" marcado) */
-  #toggle-menu:checked + nav .login-button {
-      display: block;
-  }
-
-  /* Ajuste o layout do cabeçalho para dispositivos móveis */
-  header {
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-  }
-
-  .logo-menu {
-      display: flex;
-      align-items: center;
-      flex: 1;
-      margin-bottom: 10px;
-  }
-
-  .logo {
-      flex: 1;
-  }
-
-  .search-bar {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      max-width: 300px;
-  }
-
-  .search-bar input[type="text"] {
-      width: 100%;
-  }
-}
-
-/* Estilos para a div "green-background" */
-.green-background {
-  background-color: #488097;
-  padding: 20px;
-  text-align: center;
-}
-
-.green-background p {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 1.5;
-}
-
-
-
-
-
-
-
-
-
-
-
-.highlight {
-    background-color: yellow;
-    font-weight: bold;
-  }
-  
