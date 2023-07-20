@@ -36,6 +36,52 @@
     max-height: 100px;
   }
 }
+/* Ajuste o layout da barra de pesquisa para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  .search-bar {
+    flex-grow: 1;
+    margin: 10px;
+  }
+
+  .search-bar input[type="text"] {
+    max-width: none;
+    width: 100%;
+  }
+
+  .login-button {
+    display: none;
+  }
+}
+/* Ajuste o layout do cabeçalho para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+
+  .logo img {
+    max-height: 80px;
+  }
+}
+/* Ajuste o layout do rodapé para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex-basis: 100%;
+  }
+
+  .footer-left p,
+  .footer-right p {
+    margin-bottom: 10px;
+  }
+}
+
+
 
 .highlight {
     background-color: yellow;
