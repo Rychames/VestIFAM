@@ -1,3 +1,42 @@
+/* Ajuste o tamanho da fonte para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  .main-text {
+    font-size: 60px;
+  }
+
+  /* Ajuste o tamanho das imagens na seção de "center-images" */
+  .center-images {
+    flex-direction: column;
+  }
+
+  .image15,
+  .image16,
+  .image17,
+  .image18,
+  .image19 {
+    width: 100%;
+  }
+}
+
+/* Ajuste o layout do cabeçalho para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+  .search-bar {
+    flex-grow: 1;
+  }
+
+  .login-button {
+    margin-right: 10px;
+  }
+
+  .login-button button {
+    width: 60px;
+  }
+
+  .logo img {
+    max-height: 100px;
+  }
+}
+
 .highlight {
     background-color: yellow;
     font-weight: bold;
