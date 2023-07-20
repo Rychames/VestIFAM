@@ -1,99 +1,3 @@
-/* Ajuste o tamanho da fonte para dispositivos móveis */
-@media only screen and (max-width: 768px) {
-  .main-text {
-    font-size: 60px;
-  }
-
-  /* Ajuste o tamanho das imagens na seção de "center-images" */
-  .center-images {
-    flex-direction: column;
-  }
-
-  .image15,
-  .image16,
-  .image17,
-  .image18,
-  .image19 {
-    width: 100%;
-  }
-}
-
-/* Ajuste o layout do cabeçalho para dispositivos móveis */
-@media only screen and (max-width: 600px) {
-  .search-bar {
-    flex-grow: 1;
-  }
-
-  .login-button {
-    margin-right: 10px;
-  }
-
-  .login-button button {
-    width: 60px;
-  }
-
-  .logo img {
-    max-height: 100px;
-  }
-}
-/* Ajuste o layout da barra de pesquisa para dispositivos móveis */
-@media only screen and (max-width: 768px) {
-  .search-bar {
-    flex-grow: 1;
-    margin: 10px;
-    max-width: 300px; /* Defina o tamanho máximo para evitar que a barra ocupe toda a largura */
-  }
-
-  .search-bar input[type="text"] {
-    width: 100%;
-    max-width: 100%; /* Defina a largura máxima para evitar que a entrada fique maior que a barra */
-  }
-
-  .login-button {
-    display: none;
-  }
-}
-
-
-/* Centralizar a barra de pesquisa no cabeçalho para dispositivos móveis */
-@media only screen and (max-width: 600px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .search-bar {
-    margin: 10px 0; /* Adicione uma margem vertical para melhor espaçamento */
-  }
-}
-
-/* Ajuste o layout do rodapé para dispositivos móveis */
-@media only screen and (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    flex-basis: 100%;
-  }
-
-  .footer-left p,
-  .footer-right p {
-    margin-bottom: 10px;
-  }
-}
-
-
-
-
-
-
-
-
 /* Estilos para o menu hambúrguer */
 .menu-icon {
   display: none;
@@ -137,6 +41,11 @@
       align-items: center;
   }
 
+  .logo-menu {
+      display: flex;
+      align-items: center;
+  }
+
   .logo {
       flex: 1;
   }
@@ -146,25 +55,10 @@
       display: flex;
       align-items: center;
       max-width: 300px;
+      margin-top: 10px;
   }
 
   .search-bar input[type="text"] {
       width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-.highlight {
-    background-color: yellow;
-    font-weight: bold;
-  }
-  
