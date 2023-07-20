@@ -41,27 +41,33 @@
   .search-bar {
     flex-grow: 1;
     margin: 10px;
+    max-width: 300px; /* Defina o tamanho máximo para evitar que a barra ocupe toda a largura */
   }
 
   .search-bar input[type="text"] {
-    max-width: none;
     width: 100%;
+    max-width: 100%; /* Defina a largura máxima para evitar que a entrada fique maior que a barra */
   }
 
   .login-button {
     display: none;
   }
 }
-/* Ajuste o layout do cabeçalho para dispositivos móveis */
+
+
+/* Centralizar a barra de pesquisa no cabeçalho para dispositivos móveis */
 @media only screen and (max-width: 600px) {
   header {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .logo img {
-    max-height: 80px;
+  .search-bar {
+    margin: 10px 0; /* Adicione uma margem vertical para melhor espaçamento */
   }
 }
+
 /* Ajuste o layout do rodapé para dispositivos móveis */
 @media only screen and (max-width: 768px) {
   footer {
