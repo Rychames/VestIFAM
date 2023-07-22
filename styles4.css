@@ -60,6 +60,6 @@ a {
     .image17,
     .image18,
     .image19 {
-      width: 100%; /* Ocupar a largura total da tela em telas menores */
+      width: 60%; /* Ocupar a largura total da tela em telas menores */
     }
   }
