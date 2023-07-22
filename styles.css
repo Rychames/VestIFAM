@@ -90,6 +90,74 @@ nav {
     background-color: yellow;
   }
 
+/* Adicione o restante dos estilos que você já possui */
+
+/* Estilos para a sidebar */
+.sidebar {
+  display: none; /* Ocultar a sidebar por padrão em telas maiores */
+  position: fixed;
+  top: 0;
+  right: 0; /* Posicionar a sidebar no lado direito da tela */
+  width: 200px; /* Defina a largura da sidebar conforme desejado */
+  height: 100%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  z-index: 9999; /* Certifique-se de que a sidebar esteja na frente dos outros elementos */
+}
+
+.sidebar .search-bar,
+.sidebar .login-button {
+  /* Ajustar o espaçamento dos elementos na sidebar */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.sidebar .search-bar i,
+.sidebar .login-button button {
+  font-size: 18px;
+}
+
+/* Botão para fechar a sidebar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.close-button i {
+  color: #000000;
+}
+
+/* Responsividade para exibir a sidebar quando o menu hamburguer é clicado */
+.show-sidebar {
+  display: block;
+}
+
+/* Estilos para telas menores (Celulares, Tablets, etc.) */
+@media only screen and (max-width: 768px) {
+  .nav-items {
+    display: none;
+    text-align: center; /* Centralizar os itens da barra de navegação */
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 80px;
+    top: 10px;
+  }
+
+  .fa-bars {
+    font-size: 24px;
+  }
+}
+
+
+
   /* Estilos para telas maiores (Computadores, etc.) */
 @media only screen and (min-width: 769px) {
     .nav-items {
