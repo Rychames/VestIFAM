@@ -7,6 +7,7 @@
     
     <title>VestIfam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-5izb97c2qokJOI7p/Kv4+knJgc8e8e0T6JmGx1Dv0mejcF7bz5t8qLcWz8ZyEfz2tylOKqfIOGlmPNcvbM1dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles2.css">
@@ -24,30 +25,35 @@
   
   <header>
     <nav>
-        <div class="logo-menu">
-            <div class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <a href="index.html" class="logo-link">
-                <div class="logo">
-                    <img src="elementos/24.png" alt="">
-                </div>
-            </a>
+      <a href="index.html" class="logo-link">
+        <div class="logo">
+          <img src="elementos/24.png" alt="">
         </div>
-        <!-- Barra de pesquisa -->
+      </a>
+  
+      <!-- Ícone do menu para versão mobile -->
+      <div class="mobile-menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+  
+      <!-- Itens da barra de navegação -->
+      <div class="nav-items">
         <div class="search-bar">
-            <i class="fas fa-search"></i>
-            <input type="text" id="search-input" placeholder="Pesquisar">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search-input" placeholder="Pesquisar">
         </div>
-        <!-- Botão de login -->
-        <div class="login-button">
+  
+        <a href="url-da-pagina-de-login">
+          <div class="login-button">
             <button type="button">Login</button>
-        </div>
+          </div>
+        </a>
+      </div>
     </nav>
-</header>
-
+  </header>
+  
 
   <div id="conteudo">
   
