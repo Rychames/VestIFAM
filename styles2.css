@@ -4,7 +4,8 @@
     padding: 20px;
     margin-top: 120px;
     width: 100%;
-    height: 100px;
+    height: auto;
+    overflow-y: hidden;
   }
   
   .green-background p {
@@ -12,7 +13,7 @@
     font-size: 50px;
     font-weight: bold;
     text-align: center;
-    line-height: 100px; /* Ajuste o valor conforme necessário */
+    padding: 20px;
   }
   
   /* Estilos para telas menores (Celulares, Tablets, etc.) */
@@ -23,7 +24,7 @@
     }
   
     .green-background p {
-      word-break: break-all;
+      word-break: keep-all;
     }
   }
   

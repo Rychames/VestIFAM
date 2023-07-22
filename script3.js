@@ -2,7 +2,7 @@ function translateToEnglish() {
     var textToTranslate = $('html').html(); // Obtém todo o conteúdo do site para tradução
 
     // Configurações da API de Tradução Texto do Azure
-    var subscriptionKey = 'fcae03746342418fb2d31b5eda939722';
+    var subscriptionKey = '3def44c6a495490b837a4bef058e5c60';
     var endpoint = 'https://api.cognitive.microsofttranslator.com/';
     var location = 'brazilsouth';
 

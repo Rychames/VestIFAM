@@ -43,3 +43,14 @@
   margin: 0;
   margin-right: 30px;
 }
+/* Responsividade para telas menores (Celulares, Tablets, etc.) */
+@media only screen and (max-width: 767px) {
+  .main-text {
+    font-size: 60px; /* Reduzir o tamanho da fonte para telas menores */
+  }
+
+  .image-text {
+    font-size: 24px; /* Reduzir o tamanho da fonte da legenda em telas menores */
+  }
+}
+
