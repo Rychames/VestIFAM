@@ -65,7 +65,7 @@ footer p strong {
 
   .footer-left,
   .footer-right {
-    margin-bottom: 10px; /* Adicione espaçamento entre os elementos em telas menores */
+    margin-bottom: 30xpx; /* Adicione espaçamento entre os elementos em telas menores */
   }
 
   .footer-center {
