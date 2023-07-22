@@ -1,23 +1,33 @@
 /* Seus estilos atuais */
-
+/* Estilos para telas menores */
 /* Estilos para telas menores */
 @media only screen and (max-width: 768px) {
     .nav-items {
-      display: none; /* Esconder a barra de navegação por padrão */
+      display: none;
+      text-align: center; /* Centralizar os itens da barra de navegação */
     }
   
     .mobile-menu-icon {
-      display: block; /* Exibir o ícone do menu por padrão */
+      display: block;
       cursor: pointer;
       padding: 10px;
     }
   
-    .bar {
-      width: 25px;
-      height: 3px;
-      background-color: black;
-      margin: 5px 0;
+    /* Ícone do menu do Font Awesome */
+    .fa-bars {
+      font-size: 24px;
     }
+    
+
+  }
+  
+  /* Adicione esta regra ao CSS */
+  .nav-items.show {
+    display: block; /* Mostrar os itens da barra de navegação quando a classe "show" for aplicada */
+    
+  }
+  
+  
   
   
   
@@ -56,14 +66,14 @@
   .footer-right p {
       margin-bottom: 10px;
   }
+    /* Estilos para a div "green-background" */
+    .green-background {
+        background-color: #488097;
+        padding: 50px;
+        text-align: center;
+        margin-top: 20px;
+        color: #fff;
+        font-size: 24px;
+    }
 
-  /* Estilos para a div "green-background" */
-  .green-background {
-      background-color: #488097;
-      padding: 50px;
-      text-align: center;
-      margin-top: 20px;
-      color: #fff;
-      font-size: 24px;
-  }
-}
+
