@@ -1,68 +1,35 @@
-/* Estilos para telas menores (dispositivos móveis) */
+/* Seus estilos atuais */
+
+/* Estilos para telas menores */
 @media only screen and (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .login-button,
-  .search-bar {
-    display: none;
-  }
-
-  .menu-icon,
-  .login-button,
-  .search-bar {
-    order: 3;
-    margin: 0 10px;
-  }
-
-  /* Exibe o botão de login e a barra de pesquisa quando o menu hambúrguer é ativado (checkbox "toggle-menu" marcado) */
-  #toggle-menu:checked + nav .login-button,
-  #toggle-menu:checked + nav .search-bar {
-    display: block;
-  }
-
-  /* Ajuste o layout do cabeçalho para dispositivos móveis */
-  header {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .logo-menu {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    margin-bottom: 10px;
-  }
-
-  .logo {
-    flex: 1;
-  }
-
-  .search-bar {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    max-width: 300px;
-    margin: 10px;
-  }
-
-  .search-bar input[type="text"] {
-    width: 100%;
-    max-width: 100%;
-  }
-
+    .nav-items {
+      display: none; /* Esconder a barra de navegação por padrão */
+    }
+  
+    .mobile-menu-icon {
+      display: block; /* Exibir o ícone do menu por padrão */
+      cursor: pointer;
+      padding: 10px;
+    }
+  
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      margin: 5px 0;
+    }
+  
+  
+  
+ 
   /* Ajuste o tamanho da fonte para dispositivos móveis */
   .main-text {
-    font-size: 60px;
+      font-size: 60px;
   }
 
   /* Ajuste o tamanho das imagens na seção de "center-images" */
   .center-images {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .image15,
@@ -70,58 +37,33 @@
   .image17,
   .image18,
   .image19 {
-    width: 100%;
-  }
-
-  /* Centralizar a barra de pesquisa no cabeçalho para dispositivos móveis */
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .search-bar {
-    margin: 10px 0;
+      width: 100%;
   }
 
   /* Ajuste o layout do rodapé para dispositivos móveis */
   footer {
-    flex-direction: column;
-    text-align: center;
+      flex-direction: column;
+      text-align: center;
   }
 
   .footer-left,
   .footer-center,
   .footer-right {
-    flex-basis: 100%;
+      flex-basis: 100%;
   }
 
   .footer-left p,
   .footer-right p {
-    margin-bottom: 10px;
+      margin-bottom: 10px;
   }
 
   /* Estilos para a div "green-background" */
   .green-background {
-    background-color: #488097;
-    padding: 50px;
-    text-align: center;
-    margin-top: 20px;
-    color: #fff;
-    font-size: 24px;
+      background-color: #488097;
+      padding: 50px;
+      text-align: center;
+      margin-top: 20px;
+      color: #fff;
+      font-size: 24px;
   }
-}
-
-/* Estilos para o menu hambúrguer */
-.menu-icon {
-  display: none;
-  cursor: pointer;
-}
-
-.menu-icon span {
-  display: block;
-  width: 30px;
-  height: 4px;
-  margin-bottom: 5px;
-  background-color: #000;
 }
