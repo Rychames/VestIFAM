@@ -8,7 +8,7 @@
 
 .image-container3 img {
   width: 200px; /* Ajuste a largura das imagens conforme desejado */
-  height: auto;
+  height: auto; 
 }
 
 /* Responsividade para telas menores (Celulares, Tablets, etc.) */
