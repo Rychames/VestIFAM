@@ -1,5 +1,4 @@
-
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
     const navItems = document.querySelector(".nav-items");
 
@@ -7,4 +6,3 @@
       navItems.classList.toggle("show");
     });
   });
-
