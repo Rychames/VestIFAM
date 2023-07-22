@@ -17,12 +17,27 @@
     <link rel="stylesheet" href="styles5.css">
     <link rel="stylesheet" href="styles6.css">
     <link rel="stylesheet" href="styles7.css">
+    <link rel="stylesheet" href="styles8.css">
 
 
 
 </head>
 
 <body>
+
+
+  
+
+  <!-- Elemento da tela de login (modal) -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <!-- Conteúdo da tela de login, como formulário de login, etc. -->
+    <!-- Inclua um botão para fechar o modal, caso desejado -->
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <h2>Tela de Login</h2>
+    <!-- Inclua aqui o formulário de login ou o conteúdo desejado -->
+  </div>
+</div>
   
   <header>
     <nav>
@@ -44,9 +59,9 @@
           <input type="text" id="search-input-header" placeholder="Pesquisar">
         </div>
   
-        <a href="url-da-pagina-de-login">
+        <a>
           <div class="login-button">
-            <button type="button">Login</button>
+            <button id="button-login" type="button">Login</button>
           </div>
         </a>
       </div>
@@ -65,12 +80,17 @@
       <input type="text" id="search-input-sidebar" placeholder="Pesquisar">
     </div>
   
-    <a href="url-da-pagina-de-login">
+    <a>
       <div class="login-button">
-        <button type="button">Login</button>
+        <button id="button-login-sidebar" type="button">Login</button>
       </div>
     </a>
   </div>
+
+
+
+
+
   
   
   
@@ -220,6 +240,7 @@
     <script src="script3.js"></script>
     <script src="script4.js"></script>
     <script src="script5.js"></script>
+    <script src="script6.js"></script>
     
     
 </body>

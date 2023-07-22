@@ -103,7 +103,7 @@ nav {
   height: 100%;
   background-color: #f1f1f1;
   padding: 20px;
-  z-index: 9999; /* Certifique-se de que a sidebar esteja na frente dos outros elementos */
+  z-index: 9998; /* Certifique-se de que a sidebar esteja na frente dos outros elementos */
   align-items: center;
   flex-direction: column; /* Organizar os elementos verticalmente */
   justify-content: flex-start; /* Alinhar os elementos no topo da sidebar */

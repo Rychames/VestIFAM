@@ -1,50 +1,23 @@
-/* Estilos para telas maiores (Computadores, etc.) */
-@media only screen and (min-width: 769px) {
-    .nav-items {
-      display: flex;
-      align-items: center; /* Centralizar itens verticalmente */
-      justify-content: space-between; /* Alinhar os itens da barra de navegação na extremidade */
-      padding: 0 20px; /* Adicionar espaço horizontal à barra de navegação para centralizá-la */
-    }
-    .search-bar {
-      margin-right: 400px;
-    }
-  
-    .mobile-menu-icon {
-      display: none; /* Ocultar o ícone do menu em telas maiores */
-    }
-  
-    /* Adicione outras regras de estilo aqui para telas maiores, se necessário */
+/* Estilo para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999; /* Valor alto para o modal ficar acima de outros elementos */
   }
   
-  /* Estilos para telas menores (Celulares, Tablets, etc.) */
-  @media only screen and (max-width: 768px) {
-    .nav-items {
-      display: none;
-      text-align: center; /* Centralizar os itens da barra de navegação */
-    }
-  
-    .search-bar {
-      margin-bottom: 10px; /* Adicionar espaço entre a barra de pesquisa e o botão de login em telas menores */
-    }
-  
-    .mobile-menu-icon {
-      display: block;
-      cursor: pointer;
-      padding: 10px;
-      position: absolute; /* Alterar a posição do ícone do menu */
-      right: 80px; /* Ajustar o espaço à direita do ícone (aumente esse valor para afastá-lo mais da borda direita) */
-      top: 10px; /* Ajustar o espaço acima do ícone */
-    }
-  
-    /* Ícone do menu do Font Awesome */
-    .fa-bars {
-      font-size: 24px;
-    }
-  }
-  
-  /* Adicione esta regra ao CSS */
-  .nav-items.show {
-    display: block; /* Mostrar os itens da barra de navegação quando a classe "show" for aplicada */
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 10000; /* Valor maior ainda para garantir que o conteúdo do modal fique acima de outros elementos */
   }
   
