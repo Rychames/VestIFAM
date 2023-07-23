@@ -50,7 +50,7 @@ a {
   filter: brightness(90%); /* Adjust the value to achieve the desired effect */
 }
 /* Responsividade para telas menores (Celulares, Tablets, etc.) */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
     .center-images {
       flex-direction: column; /* Empilhar as imagens verticalmente */
     }
