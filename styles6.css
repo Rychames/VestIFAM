@@ -12,7 +12,7 @@
 }
 
 /* Responsividade para telas menores (Celulares, Tablets, etc.) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 972px) {
   .image-container3 {
     flex-wrap: wrap; /* Empilhar as imagens verticalmente em telas menores */
     justify-content: center; /* Centralizar as imagens na tela */

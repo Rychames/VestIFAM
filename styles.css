@@ -137,7 +137,7 @@ nav {
 }
 
 /* Botão para fechar a sidebar */
-.close-button {
+.close-button1 {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -145,7 +145,7 @@ nav {
   font-size: 20px;
 }
 
-.close-button i {
+.close-button1 i {
   color: #000000;
 }
 
@@ -182,7 +182,7 @@ nav {
     .nav-items {
       display: flex;
       align-items: center; /* Centralizar itens verticalmente */
-      justify-content: space-between; /* Alinhar osw itens da barra de navegação na extremidade */
+      justify-content: space-between; /* Alinhar os itens da barra de navegação na extremidade */
       padding: 0 20px; /* Adicionar espaço horizontal à barra de navegação para centralizá-la */
     }
     .search-bar {
@@ -197,7 +197,7 @@ nav {
   }
   
   /* Estilos para telas menores (Celulares, Tablets, etc.) */
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 972px) {
     .nav-items {
       display: none;
       text-align: center; /* Centralizar os itens da barra de navegação */

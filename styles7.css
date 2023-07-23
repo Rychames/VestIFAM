@@ -54,7 +54,7 @@ footer p strong {
 }
 
 /* Responsividade para telas menores (Celulares, Tablets, etc.) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 972px) {
   footer {
     flex-direction: column; /* Empilhar os elementos verticalmente */
     text-align: center;

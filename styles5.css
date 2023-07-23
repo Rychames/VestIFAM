@@ -44,7 +44,7 @@
   margin-right: 30px;
 }
 /* Responsividade para telas menores (Celulares, Tablets, etc.) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 972px) {
   .main-text {
     font-size: 30px; /* Reduzir o tamanho da fonte para telas menores */
   }
