@@ -27,17 +27,28 @@
 
 
   
-
-  <!-- Elemento da tela de login (modal) -->
+<!-- Elemento da tela de login (modal) -->
 <div id="modal" class="modal">
   <div class="modal-content">
     <!-- Conteúdo da tela de login, como formulário de login, etc. -->
     <!-- Inclua um botão para fechar o modal, caso desejado -->
     <span class="close-button" onclick="closeModal()">&times;</span>
-    <h2>Tela de Login</h2>
-    <!-- Inclua aqui o formulário de login ou o conteúdo desejado -->
+    <h2>Faça Login ou Cadastro no VestIFAM</h2>
+    <form>
+      <div class="form-group">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" placeholder="Digite seu usuário">
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" placeholder="Digite sua senha">
+      </div>
+      <button type="submit">Login</button>
+    </form>
   </div>
 </div>
+
+
   
   <header>
     <nav>
@@ -235,6 +246,9 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@microsoft/applicationinsights-web@2.9.1/dist/bundle/ai.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/microsoft-translator-browser-sdk/lib/browser/microsoft-translator.min.js"></script>
+
     <script src="script.js"></script>
     <script src="script2.js"></script>
     <script src="script3.js"></script>
